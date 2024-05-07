@@ -1,9 +1,37 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 
-
-
 int main(void) {
+	int c = 0;
+	for (int i = 2; i <= 100; i++) {
+		int flag = 1;
+		for (int j = 2; j < i; j++) {
+			if (i % j == 0) {
+				flag = 0;
+			}
+		}
+		if (flag) {
+			printf("%3d", i);
+			c++;
+		}
+	}
+	printf("\n");
+	printf("소수는 %d개", c);
+}
+
+
+
+int main8(void) {
+	for (int i = 1; i <= 9;i++) {
+		printf("%d단\n", i);
+		for (int j = 1; j <= 9;j++) {
+			printf("%d X %d = %d\t", i, j, i * j);
+		}
+		printf("\n");
+	}
+}
+
+int main7(void) {
 	int n, sum;
 	sum = 0;
 	printf("수 입력 : ");
